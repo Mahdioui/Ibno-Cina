@@ -1,0 +1,21 @@
+<div class="container" *ngIf="blog">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <h1 class="my-4">{{ blog?.title }}</h1>
+      
+      <img [src]="blog?.imageUrl" class="img-fluid rounded mb-4" alt="{{ blog?.title }}">
+      
+      <div class="blog-meta mb-4">
+        <p class="text-muted">
+          By {{ blog?.author }} | Published on {{ blog?.publishDate}}
+        </p>
+      </div>
+      
+      <div class="blog-content">
+        {{ blog?.content }}
+      </div>
+      
+      <a routerLink="/blogs" class="btn btn-secondary mt-4">Back to Blogs</a>
+    </div>
+  </div>
+</div>
